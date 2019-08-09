@@ -13,4 +13,8 @@ movie_data = pd.merge(ratings_data, movies_info, on='movieId')
 movie_data.groupby('title')['rating'].mean().sort_values(ascending=False)
 # print movie_data.head()
 
-print movie_data.groupby('title')['rating'].count().sort_values(ascending=False).head()
+# print movie_data.groupby('title')['rating'].count().sort_values(ascending=False).head()
+
+ratings_mean_count = pd.DataFrame(movie_data.groupby('title')['rating'].mean())
+ratings_mean_count['rating_counts'] = pd.DataFrame(movie_data.groupby('title')['rating'].count())
+print ratings_mean_count.head()

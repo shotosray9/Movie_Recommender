@@ -1,0 +1,3 @@
+This is my attempt at making a movie recommendation system in Python, using the MovieLens dataset.
+As of right now, I am trying to implement Content based filtering.
+Will update this file with my status, progress and future plans of what to add to this project.
